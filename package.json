@@ -1,0 +1,36 @@
+{
+  "name": "fleur-first-cli",
+  "version": "1.0.0",
+  "description": "translator demo",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fleurWang/fleur-first-cli.git"
+  },
+  "keywords": [
+    "translator",
+    "node",
+    "cli"
+  ],
+  "author": "fleurwang",
+  "bin": {
+    "index": "./bin/index"
+  },
+  "scripts": {
+    "build": "./node_modules/.bin/babel index.js --out-file build/build.js",
+    "build-watch": "./node_modules/.bin/babel index.js --out-file build/build.js --watch"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fleurWang/fleur-first-cli/issues"
+  },
+  "homepage": "https://github.com/fleurWang/fleur-first-cli#readme",
+  "dependencies": {
+    "colors": "^1.0.3",
+    "commander": "^2.5.0",
+    "request": "^2.51.0"
+  },
+  "devDependencies": {
+    "babel": "^5.1.11"
+  }
+}
