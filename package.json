@@ -14,7 +14,7 @@
   ],
   "author": "fleurwang",
   "bin": {
-    "index": "./bin/index"
+    "trans": "./bin/trans"
   },
   "scripts": {
     "build": "./node_modules/.bin/babel index.js --out-file build/build.js",
@@ -29,8 +29,5 @@
     "colors": "^1.0.3",
     "commander": "^2.5.0",
     "request": "^2.51.0"
-  },
-  "devDependencies": {
-    "babel-node": "^5.1.11"
   }
 }
