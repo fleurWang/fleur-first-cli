@@ -31,6 +31,6 @@
     "request": "^2.51.0"
   },
   "devDependencies": {
-    "babel": "^5.1.11"
+    "babel-node": "^5.1.11"
   }
 }

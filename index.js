@@ -1,15 +1,14 @@
 'use strict';
 
 // Module dependencies
-import request from 'request';
-import program from 'commander';
+const request = require('request');
+const program = require('commander');
 
-import lib from './lib';
-import config from './config';
-import pkg from './package.json';
+const lib = require ('./lib');
+const url = 'http://fanyi.youdao.com/openapi.do?keyfrom=node-translator&key=2058911035&type=data&doctype=json&version=1.1&q=';
+const pkg =('./package.json');
 
-export default function (params) {
-
+module.exports = function (params) {
   program
     .version(pkg.version)
     .usage('[word to be translated]');
@@ -27,7 +26,7 @@ export default function (params) {
     return;
   }
 
-  request(config.src + encodeURIComponent(params), (err, res, body) => {
+  request(url + encodeURIComponent(params), (err, res, body) => {
     var data;
 
     if (!err && res.statusCode === 200) {
@@ -43,4 +42,4 @@ export default function (params) {
     }
   });
 
-}
+};
